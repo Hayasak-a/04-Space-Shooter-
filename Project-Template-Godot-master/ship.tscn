@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://RigidBody2D.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/ship.png" type="Texture" id=2]
+
+[node name="ship" type="RigidBody2D"]
+position = Vector2( 1.40578, 7.23751 )
+mass = 10.0
+gravity_scale = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 90.0537, 294.101 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 90.0537, 294.101 )
+polygon = PoolVector2Array( 7, -15.3, 9.3, -10, 9.9, -10, 16, -11.6, 16, 16, -16, 16, -16, -9.1, -14.1, -12, -10.4, -12, -10, -11.7, -7, -15.7, 7, -16 )
+
+[node name="gun" type="Node2D" parent="."]
+position = Vector2( 87.4763, 298.586 )
+
+[node name="left" type="Position2D" parent="gun"]
+position = Vector2( -12, -8 )
+
+[node name="right" type="Position2D" parent="gun"]
+position = Vector2( 12, -8 )
