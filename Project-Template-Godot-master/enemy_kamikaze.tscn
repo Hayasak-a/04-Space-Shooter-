@@ -9,7 +9,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-velocity = Vector2( 0, 150 )
+velocity = Vector2( 0, 125 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )

@@ -24,7 +24,7 @@ polygon = PoolVector2Array( 7, -15.3, 9.3, -10, 9.9, -10, 16, -11.6, 16, 16, -16
 position = Vector2( 87.4763, 298.586 )
 
 [node name="left" type="Position2D" parent="gun"]
-position = Vector2( -12, -8 )
+position = Vector2( -14, -8 )
 
 [node name="right" type="Position2D" parent="gun"]
-position = Vector2( 12, -8 )
+position = Vector2( 10, -8 )

@@ -5,25 +5,27 @@ extends RigidBody2D
 # var b = "text"
 
 var can_shoot = true
+var score = 0
 
 const laser = preload("res://laser_ship.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	mode = MODE_KINEMATIC
+	add_to_group("ship")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if Input.is_action_pressed("left"):
-    	position.x = position.x - 2
+    	position.x = position.x - 6
 	if Input.is_action_pressed("right"):
-    	position.x = position.x + 2
+    	position.x = position.x + 6
 	if Input.is_action_pressed("fire") && can_shoot == true:
 		shoot()
 
 func disable_shoot():
 	can_shoot = false
 	var t = Timer.new()
-	t.set_wait_time(0.25)
+	t.set_wait_time(0.3)
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()
